@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="600.0" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.radixsort.Controller.ProgramController">
+   <children>
+      <Button fx:id="chooseFileBtn" layoutX="116.0" layoutY="441.0" mnemonicParsing="false" onAction="#chooseFileClicked" text="Choose file" />
+      <Button fx:id="loadFileBtn" layoutX="219.0" layoutY="441.0" mnemonicParsing="false" onAction="#loadFileClick" prefHeight="31.0" prefWidth="94.0" text="Load File" />
+      <Button fx:id="radixSortBtn" layoutX="116.0" layoutY="491.0" mnemonicParsing="false" onAction="#radixSortClick" prefHeight="31.0" prefWidth="94.0" text="Radix Sort" />
+      <TextArea fx:id="textArea" editable="false" layoutX="13.0" layoutY="33.0" prefHeight="394.0" prefWidth="573.0" text="Input here the numbers to Sort!" wrapText="true">
+         <font>
+            <Font size="23.0" />
+         </font></TextArea>
+      <RadioButton fx:id="generateNumbersRadioBtn" layoutX="386.0" layoutY="446.0" mnemonicParsing="false" text="Generate Numbers" textFill="WHITE" />
+      <Label layoutX="373.0" layoutY="481.0" text="No. of elements" textFill="WHITE" />
+      <TextField fx:id="elementsTF" layoutX="490.0" layoutY="476.0" prefHeight="31.0" prefWidth="61.0" text="20" />
+      <Label layoutX="408.0" layoutY="530.0" text="Min" textFill="WHITE" />
+      <TextField fx:id="minTF" layoutX="490.0" layoutY="525.0" prefHeight="31.0" prefWidth="61.0" text="1" />
+      <Label layoutX="408.0" layoutY="585.0" text="Max" textFill="WHITE" />
+      <TextField fx:id="maxTF" layoutX="490.0" layoutY="580.0" prefHeight="31.0" prefWidth="61.0" text="20" />
+      <Button fx:id="generateBtn" layoutX="373.0" layoutY="623.0" mnemonicParsing="false" onAction="#onGenerateClick" text="Generate" />
+      <Button fx:id="saveToInputBtn" layoutX="471.0" layoutY="623.0" mnemonicParsing="false" onAction="#onSaveToInputClick" text="Save to Input" />
+   </children>
+</AnchorPane>
